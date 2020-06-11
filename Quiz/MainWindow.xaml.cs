@@ -20,9 +20,30 @@ namespace Quiz
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Constructor
         public MainWindow()
         {
             InitializeComponent();
+            this.CloseBtn.Click += (s, e) => this.Close();
+            this.Exit.Click += (s, e) => this.Close();
+            this.MinimizeBtn.Click += (s, e) => this.WindowState = WindowState.Minimized;
         }
+        #endregion
+        #region Events
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DatabaseWindow window = new DatabaseWindow();
+            window.ShowDialog();
+            
+        }
+
+        private void StartQuiz_Click(object sender, RoutedEventArgs e)
+        {
+            Database.db.Answer = new List<Answers>();
+            List<Question> SelectedQuestions = Database.db.GetQuestions();
+            QuizWindow window = new QuizWindow(SelectedQuestions);
+            window.ShowDialog();
+        }
+        #endregion
     }
 }

@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" WindowStartupLocation="CenterScreen" Background="DarkGray" Height="250" Width="300" WindowStyle="None" ResizeMode="NoResize">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="30"/>
+    </WindowChrome.WindowChrome>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Height="30" Background="#3F3F3F">
+            <Label DockPanel.Dock="Left" Height="30" Content="Let's QUIZ!!!" Foreground="WhiteSmoke"/>
+            <WrapPanel Width="70" Margin="155,0,0,0">
+                <Button x:Name="MinimizeBtn" WindowChrome.IsHitTestVisibleInChrome="True" Margin="2,0" Style="{DynamicResource Button.Hoverless}" Height="30" Width="30" Background="Transparent">
+                    <Image Source="Graphics/minimize.png"/>
+                </Button>
+                <Button x:Name="CloseBtn" WindowChrome.IsHitTestVisibleInChrome="True" Margin="2,0" Style="{DynamicResource Button.Hoverless}" Height="30" Width="30" Background="Transparent">
+                    <Image Source="Graphics/close.png"/>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+        <Grid Width="100" Margin="0,80,0,0">
+            <Button x:Name="AddBtn" ToolTip="Add questions to database" Style="{DynamicResource Button.Hoverless}" Width="40" Height="40" 
+                    Background="Transparent" Click="AddBtn_Click" HorizontalAlignment="Left">
+                <Image Source="Graphics/addQuestion.png"/>
+            </Button>
+            <Button x:Name="StartQuiz" ToolTip="Start Quiz" Style="{DynamicResource Button.Hoverless}" Width="40" Height="40" 
+                    Background="Transparent" Click="StartQuiz_Click" HorizontalAlignment="Right">
+                <Image Source="Graphics/quiz.png"/>
+            </Button>
+        </Grid>
+        <Button x:Name="Exit" ToolTip="Exit" Style="{DynamicResource Button.Hoverless}" Width="40" Height="40"
+                Background="Transparent">
+            <Image Source="Graphics/exit.png"/>
+        </Button>
+    </StackPanel>
 </Window>

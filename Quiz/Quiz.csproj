@@ -55,7 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Question.cs" />
+    <Compile Include="DatabaseWindow.xaml.cs">
+      <DependentUpon>DatabaseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuizWindow.xaml.cs">
+      <DependentUpon>QuizWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz\Answers\Answers.cs" />
+    <Compile Include="Quiz\Database\Database.cs" />
+    <Compile Include="Quiz\Question\Question.cs" />
+    <Page Include="DatabaseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +80,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="QuizWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -96,14 +116,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\" />
-    <Folder Include="Commands\" />
-    <Folder Include="Converters\" />
-    <Folder Include="Graphics\" />
-    <Folder Include="Main\" />
-    <Folder Include="Quiz\Answers\" />
-    <Folder Include="Quiz\Database\" />
-    <Folder Include="Quiz\Question\" />
+    <Resource Include="Graphics\addQuestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\close.png" />
+    <Resource Include="Graphics\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\exit.png" />
+    <Resource Include="Graphics\quiz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphics\forward.png" />
+    <Resource Include="Graphics\rewind.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
