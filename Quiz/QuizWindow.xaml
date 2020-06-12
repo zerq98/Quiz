@@ -1,0 +1,58 @@
+﻿<Window x:Class="Quiz.QuizWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz"
+        mc:Ignorable="d"
+        Title="QuizWindow" WindowStartupLocation="CenterScreen" Background="DarkGray" Height="350" Width="400" WindowStyle="None" ResizeMode="NoResize">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="30"/>
+    </WindowChrome.WindowChrome>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Height="30" Background="#3F3F3F">
+            <Label DockPanel.Dock="Left" Height="30" Content="Let's QUIZ!!!" Foreground="WhiteSmoke"/>
+            <WrapPanel Margin="290,0,0,0">
+                <Button x:Name="CloseBtn" WindowChrome.IsHitTestVisibleInChrome="True" Margin="2,0" Style="{DynamicResource Button.Hoverless}" Height="30" Width="30" Background="Transparent">
+                    <Image Source="Graphics/close.png"/>
+                </Button>
+            </WrapPanel>
+        </StackPanel>
+        <Grid>
+            <GroupBox x:Name="QuestionBox" Height="200" Width="250" Margin="0,20,0,0">
+                <Grid>
+                    <Border BorderBrush="Black" Height="70" BorderThickness="2" VerticalAlignment="Top" Margin="10,10,10,0">
+                        <TextBlock Name="Content" Height="70" FontSize="10" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center"/>
+                    </Border>
+                    <Grid Height="35" Margin="0,30,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="70*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" BorderBrush="Black" Height="35" BorderThickness="2" VerticalAlignment="Top" Margin="0,0,5,0">
+                            <TextBlock x:Name="AnswerA" Height="35" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Column="1" BorderBrush="Black" Height="35" BorderThickness="2" VerticalAlignment="Top" Margin="0,0,5,0">
+                            <TextBlock x:Name="AnswerB" Height="35" TextWrapping="Wrap"/>
+                        </Border>
+                        <Border Grid.Column="2" BorderBrush="Black" Height="35" BorderThickness="2" VerticalAlignment="Top">
+                            <TextBlock x:Name="AnswerC" Height="35" TextWrapping="Wrap"/>
+                        </Border>
+                    </Grid>
+                    <RadioButton x:Name="A" GroupName="Answers" Style="{DynamicResource RBSize}" Content="A" FontSize="20" Width="45" Height="20" Margin="0,100,160,0"/>
+                    <RadioButton x:Name="B" GroupName="Answers" Style="{DynamicResource RBSize}" Content="B" FontSize="20" Width="45" Height="20" Margin="0,100,0,0"/>
+                    <RadioButton x:Name="C" GroupName="Answers" Style="{DynamicResource RBSize}" Content="C" FontSize="20" Width="45" Height="20" Margin="160,100,0,0"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <Grid Height="100">
+            <Button x:Name="Backward" ToolTip="Step backward" Style="{DynamicResource Button.Hoverless}" Width="64" Click="Backward_Click" Height="64" Margin="0,0,150,0">
+                <Image Source="Graphics/rewind.png"/>
+            </Button>
+            <Button x:Name="Forward" ToolTip="Step backward" Style="{DynamicResource Button.Hoverless}" Width="64" Click="Forward_Click" Height="64" Margin="150,0,0,0">
+                <Image Source="Graphics/forward.png"/>
+            </Button>
+        </Grid>
+    </StackPanel>
+</Window>

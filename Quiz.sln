@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz", "Quiz\Quiz.csproj", "{7ADC21D4-4953-47FB-9B23-6DD00B8E832F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizTest", "QuizTest\QuizTest.csproj", "{5ACFA19E-CD86-4DCF-A306-242D04CEAD33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Tests", "Quiz.Tests\Quiz.Tests.csproj", "{9915202D-C8E6-496B-A282-98FC8B1A43DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{7ADC21D4-4953-47FB-9B23-6DD00B8E832F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ADC21D4-4953-47FB-9B23-6DD00B8E832F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ADC21D4-4953-47FB-9B23-6DD00B8E832F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5ACFA19E-CD86-4DCF-A306-242D04CEAD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5ACFA19E-CD86-4DCF-A306-242D04CEAD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5ACFA19E-CD86-4DCF-A306-242D04CEAD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5ACFA19E-CD86-4DCF-A306-242D04CEAD33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9915202D-C8E6-496B-A282-98FC8B1A43DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9915202D-C8E6-496B-A282-98FC8B1A43DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9915202D-C8E6-496B-A282-98FC8B1A43DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9915202D-C8E6-496B-A282-98FC8B1A43DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
