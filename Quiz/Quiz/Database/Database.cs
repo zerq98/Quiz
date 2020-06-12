@@ -86,6 +86,7 @@ namespace Quiz
                 int index = rnd.Next(0, temp.Count);
                 ReturnList.Add(temp[index]);
                 temp.RemoveAt(index);
+                counter++;
             }
 
             return ReturnList;
